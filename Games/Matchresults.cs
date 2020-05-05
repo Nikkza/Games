@@ -70,7 +70,8 @@ namespace Games
             $"Points: {resultsFromGame.CountPoints}" + Environment.NewLine +
             $"Wins: {resultsFromGame.CountWinMatches}" + Environment.NewLine +
             $"Lost: {resultsFromGame.CountEvenMatches}" + Environment.NewLine +
-            $"Ewen: {resultsFromGame.CountLostMatches}";
+            $"Ewen: {resultsFromGame.CountLostMatches}" + Environment.NewLine +
+            $"-----------------------------------";
         }
     }
 }
