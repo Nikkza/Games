@@ -12,9 +12,12 @@ namespace Games
                 Matchresults results = new Matchresults();
                 string test = Console.ReadLine();
                 var arrayCreated = results.CreatArray(test);
-                var resultsFromGame = results.TotalAmountOfPoints(arrayCreated, results);
-                Console.WriteLine(results.WriteOutResultsFromGame(resultsFromGame));
-
+                if (arrayCreated.Count > 0)
+                {
+                    var resultsFromGame = results.TotalAmountOfPoints(arrayCreated, results);
+                    Console.WriteLine(results.WriteOutResultsFromGame(resultsFromGame));
+                }else
+                    Console.WriteLine("Must be a number");
             }
         }
     }

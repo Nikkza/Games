@@ -29,15 +29,15 @@ namespace Games
         {
             Random random = new Random();
             List<string> createMatchList = new List<string>();
-            var numberOfgames = long.Parse(games);
-
-            for (int i = 0; i < numberOfgames; i++)
+            if (long.TryParse(games, out long numberOfgames))
             {
-                var x = random.Next(0, 20);
-                var y = random.Next(0, 20);
-                createMatchList.Add(x.ToString() + ":" + y.ToString());
+                for (int i = 0; i < numberOfgames; i++)
+                {
+                    var x = random.Next(0, 20);
+                    var y = random.Next(0, 20);
+                    createMatchList.Add(x.ToString() + ":" + y.ToString());
+                }
             }
-
             return createMatchList;
         }
 
@@ -61,7 +61,6 @@ namespace Games
                 }
                 result.CountMatches++;
             }
-
             return result.Results(result.CountPoints, result.CountMatches, result.CountWinMatches, result.CountEvenMatches, result.CountLostMatches);
         }
 
