@@ -64,7 +64,7 @@ namespace Games
             return result.GeMatcResults(result.CountPoints, result.CountMatches, result.CountWinMatches, result.CountEvenMatches, result.CountLostMatches);
         }
 
-        public string WriteOutResultsFromGame(Matchresults resultsFromGame)
+        public static string WriteOutResultsFromGame(Matchresults resultsFromGame)
         {
             return $"Total Games: {resultsFromGame.CountMatches}" + Environment.NewLine +
             $"Points: {resultsFromGame.CountPoints}" + Environment.NewLine +
@@ -73,5 +73,16 @@ namespace Games
             $"Ewen: {resultsFromGame.CountLostMatches}" + Environment.NewLine +
             $"-----------------------------------";
         }
+
+        public override string ToString()
+        {
+            return $"Total Games: {CountMatches}" + Environment.NewLine +
+          $"Points: {CountPoints}" + Environment.NewLine +
+          $"Wins: {CountWinMatches}" + Environment.NewLine +
+          $"Lost: {CountEvenMatches}" + Environment.NewLine +
+          $"Ewen: {CountLostMatches}" + Environment.NewLine +
+          $"-----------------------------------";
+        }
+   
     }
 }

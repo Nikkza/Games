@@ -15,9 +15,10 @@ namespace Games
                 if (arrayCreated.Count > 0)
                 {
                     var resultsFromGame = results.TotalAmountOfPoints(arrayCreated, results);
-                    Console.WriteLine(results.WriteOutResultsFromGame(resultsFromGame));
+                    Console.WriteLine(Matchresults.WriteOutResultsFromGame(resultsFromGame));
                 }else
                     Console.WriteLine("Must be a number");
+               
             }
         }
     }
