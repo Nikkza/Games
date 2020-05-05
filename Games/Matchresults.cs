@@ -11,7 +11,7 @@ namespace Games
         public int CountEvenMatches { get; set; }
         public int CountLostMatches { get; set; }
 
-        public Matchresults Results(int _countPoints, int _countMatches,
+        public Matchresults GeMatcResults(int _countPoints, int _countMatches,
             int _countWinMatches, int _countEvenMatches, int _countLostMatches)
         {
             var getResultFromGame = new Matchresults()
@@ -61,7 +61,7 @@ namespace Games
                 }
                 result.CountMatches++;
             }
-            return result.Results(result.CountPoints, result.CountMatches, result.CountWinMatches, result.CountEvenMatches, result.CountLostMatches);
+            return result.GeMatcResults(result.CountPoints, result.CountMatches, result.CountWinMatches, result.CountEvenMatches, result.CountLostMatches);
         }
 
         public string WriteOutResultsFromGame(Matchresults resultsFromGame)
